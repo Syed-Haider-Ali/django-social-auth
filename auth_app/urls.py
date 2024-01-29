@@ -1,7 +1,7 @@
-from django.urls import path, include
-from .views import *
+from django.urls import path
+from .views import AuthView
 
 urlpatterns = [
-    path('', home),
-    path('logout', logout_user, name='logout')
+    path('', AuthView.as_view({'get': 'home'})),
+    path('logout', AuthView.as_view({'get': 'logout_user'}), name='logout')
 ]
