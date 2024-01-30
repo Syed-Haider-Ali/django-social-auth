@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.google'
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
 ]
 
 #### social
@@ -149,5 +150,3 @@ AUTHENTICATION_BACKENDS = {
     "allauth.account.auth_backends.AuthenticationBackend",
 }
 
-LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL = "/"
